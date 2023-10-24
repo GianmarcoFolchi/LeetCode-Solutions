@@ -14,6 +14,7 @@ class Solution:
             timeMap[node] = timeToReach
             t = max(t, timeToReach)
             for (weight, dest) in edgeMap[node]: 
-                heapq.heappush(heap, (timeToReach + weight, dest))
+                if dest not in timeMap:
+                    heapq.heappush(heap, (timeToReach + weight, dest))
 
         return t if len(timeMap) == n else -1
