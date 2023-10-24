@@ -8,7 +8,6 @@ class Trie:
         currTrie = self
         for i, c in enumerate(word): 
             cIndex = indexForLetter(c)
-            print(type(currTrie))
             if not currTrie.nodes[cIndex]:
                 currTrie.nodes[cIndex] = Trie()
             currTrie = currTrie.nodes[cIndex]
