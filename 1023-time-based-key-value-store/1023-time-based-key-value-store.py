@@ -21,12 +21,9 @@ def binarySearch(arr, timestamp):
         middle = (left + right) // 2
         if arr[middle][0] > timestamp: 
             right = middle - 1
-        elif arr[middle][0] < timestamp: 
+        elif arr[middle][0] <= timestamp: 
             closest = arr[middle][1]
             left = middle + 1
-        else: 
-            closest = arr[middle][1]
-            break
 
     return closest
 
