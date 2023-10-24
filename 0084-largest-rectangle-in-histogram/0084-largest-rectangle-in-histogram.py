@@ -15,8 +15,6 @@ class Solution:
         
         return maxArea
         
-
-
 class RectangleNode: 
     def __init__(self, height, index): 
         self.index = index
